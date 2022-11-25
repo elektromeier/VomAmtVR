@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="FvSNCA7f3G6QUC1lMvj8zd" LanguageVersion="2021.4.11.1176" Version="0.128">
+  <NugetDependency Id="DBoSf4fFsQ3N0r4yjNOmpo" Location="VL.CoreLib" Version="2021.4.11-1176-gabb16f9839" />
+  <Patch Id="BxuZffE323xNepBnPacDtv">
+    <Canvas Id="VM74e57tLScO60P3ywNhIc" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="SpjAYz52QnVNGRuUEwFMAe">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="OeRaQqIPi5iPJwktPTsXqL">
+        <Canvas Id="CxWLYSnCmMlPEVmQFSPM1L" CanvasType="Group">
+          <Node Bounds="455,231,96,19" Id="BQi8dED7GxzOJFlo0RBRKl">
+            <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechConfig" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="SpeechConfig" />
+              <Choice Kind="OperationCallFlag" Name="FromSubscription" />
+            </p:NodeReference>
+            <Pin Id="GCsk88OfNjxLFgmJmacsy3" Name="Subscription Key" Kind="InputPin" />
+            <Pin Id="PVFQZrO3VQONQzdfq83jac" Name="Region" Kind="InputPin" />
+            <Pin Id="I03cytXdjmnOa0T45rDh78" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="455,303,81,19" Id="OKf7pnQjSl6Ock1rZ14RVJ">
+            <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognizer" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="SpeechRecognizer" />
+              <Choice Kind="OperationCallFlag" Name="Create" />
+            </p:NodeReference>
+            <Pin Id="QvVdR1tER2gLHutXYTtCpd" Name="Speech Config" Kind="InputPin" />
+            <Pin Id="E4fm2GEduB8Lbs3M9eAc3C" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="EStLiCxUmSdOVxmUstPw1u" Bounds="457,360" />
+          <Node Bounds="537,691,65,19" Id="GePs3kpWJQpMN3onhugvTN">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="Ds30bB936PLQbDnnSISUEp" Name="Initial Result" Kind="InputPin" />
+            <Pin Id="Md4bzgMo1sFOvahjJy5pLy" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="TWyTqPOesSqQYuqYxvEHLn" Name="Reset" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="NkEuhDAO5xaM1r4r32DTy8" Name="Value" Kind="OutputPin" />
+            <Pin Id="H5hsCRT263uLnFOCxE1TfL" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="567,450,190,213" Id="M0MXvaNH5HeNdsNNF0B5vB">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="ProcessAppFlag" Name="ForEach (Keep)" />
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+            </p:NodeReference>
+            <Pin Id="AtnYq8NsLjsOZCKzAcH5gd" Name="Messages" Kind="InputPin" />
+            <Pin Id="IJjdPy8S5yaNb7kM9YbcwN" Name="Reset" Kind="InputPin" />
+            <Pin Id="FLwcplfUo0YQLqxC6ef4yl" Name="Result" Kind="OutputPin" />
+            <Patch Id="EsCH3kl5jrFMglZjEmePbl" ManuallySortedPins="true">
+              <Patch Id="Aa1vhj9iDAaOFuMXsGPtvs" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="Cjr5Jh6pPxwMmwkOuc9ldK" Name="Update" ManuallySortedPins="true">
+                <Pin Id="DQy8tZ9iroPMy5AWUGqRDX" Name="Input 1" Kind="InputPin" />
+                <Pin Id="HRy4bmi7wRkMHWaIyne3UJ" Name="Output 1" Kind="OutputPin" />
+                <Pin Id="POXUtqdeqTnMKRMkKoAa0j" Name="Output 2" Kind="OutputPin" />
+              </Patch>
+              <ControlPoint Id="C28p4CINVnnOibbr44AUpc" Bounds="581,458" />
+              <ControlPoint Id="FwtlLQ6a6aKOfgw3v7aa3u" Bounds="601,654" />
+              <ControlPoint Id="AJ6srgJdu6VLmkYPux3QKy" Bounds="694,656" />
+              <Node Bounds="579,558,81,19" Id="RuuNntpiQgpOY1E1jdeUX1">
+                <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.RecognitionResult" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Reason" />
+                  <CategoryReference Kind="AssemblyCategory" Name="RecognitionResult" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="A3UwdusNHmaMrAE511cgzr" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SK0tpBq48ojPViqUghRiFZ" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="K6UFvSRisv4P26rODVwtjZ" Name="Reason" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="692,615,25,19" Id="G33cieiaTo6LAMflhxlN56">
+                <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.ResultReason" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="ResultReason" />
+                  <Choice Kind="OperationCallFlag" Name="=" />
+                </p:NodeReference>
+                <Pin Id="GNe6r7mY1F5MqD9q1Jf5a4" Name="Input" Kind="InputPin" />
+                <Pin Id="BuZDOpyOYeZPWVMiq0vfs7" Name="Input 2" Kind="InputPin" DefaultValue="RecognizedSpeech">
+                  <p:TypeAnnotation LastCategoryFullName="Microsoft.CognitiveServices.Speech" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                    <Choice Kind="TypeFlag" Name="ResultReason" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="Lrdvh7PAzh0N0JIsebmIzq" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="579,600,81,19" Id="ONfodzbp1E4LbXR5B6iI4k">
+                <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.RecognitionResult" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Text" />
+                  <CategoryReference Kind="AssemblyCategory" Name="RecognitionResult" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="SyVIICQd6fNLjg9VWUAzPn" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SfCOcVMGdkwO2HP4CQDCrj" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="ScrpXXSRMlpQI9cXW1LmH1" Name="Text" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="579,475,62,19" Id="RmsqBfev58UMbuAc0nPZ0l">
+                <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastSymbolSource="VL.Reactive.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="RecordType" Name="EventPattern" />
+                  <Choice Kind="OperationCallFlag" Name="EventArgs" />
+                </p:NodeReference>
+                <Pin Id="TMjHxLt1emTNsZptjrs0t9" Name="Input" Kind="StateInputPin" />
+                <Pin Id="GGH3jTNmX3YLm9Ckm90Asx" Name="Event Args" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="579,514,119,19" Id="KcCY2Mmmm3uL2Su6bbcJeq">
+                <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognitionEventArgs" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="SpeechRecognitionEventArgs" />
+                  <Choice Kind="OperationCallFlag" Name="Result" />
+                </p:NodeReference>
+                <Pin Id="K9TPeiXYk7AN4qt5ESrbHY" Name="Input" Kind="StateInputPin" />
+                <Pin Id="N80H1YPq2dEQD6jrDUfUB4" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="BRoDY90y2P8LGe2X58odR8" Name="Result" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Pad Id="OsB6J8vRs7fQKbJYOkN9EY" Comment="" Bounds="539,771,282,97" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="B7a4DFmcaA8LcSPQP4kRQ0" Comment="On Data" Bounds="599,725,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DmZJ6bAxNpOMGIucLn9n9c" Comment="Subscription Key" Bounds="457,189,259,9" ShowValueBox="true" isIOBox="true" Value="f2d8abd93fee4bfe853e15840a759938">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="U5VEldmZgS6LtrhKa5xfvb" Comment="Region" Bounds="549,212,107,11" ShowValueBox="true" isIOBox="true" Value="switzerlandnorth">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="274,424,194,83" Id="LYCRoMoXhk9OjYW2fv2YMJ">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="If" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <Pin Id="VWCDS05EJNUQb6wrAJJWz8" Name="Condition" Kind="InputPin" />
+            <Patch Id="TymNluziu7lMsr4dtslJ2i" ManuallySortedPins="true">
+              <Patch Id="M2TCGd0NVVhOGkQ9WZnrjp" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="MPjBC1P2wUNOUIvmODr9qe" Name="Then" ManuallySortedPins="true" />
+              <Node Bounds="286,456,170,19" Id="DE7F6F7djS7M2RLCyN1wkS">
+                <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognizer" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="StartContinuousRecognitionAsync" />
+                  <CategoryReference Kind="AssemblyCategory" Name="SpeechRecognizer" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="TMQxac9yQJfPbAXCQ5zHgk" Name="Input" Kind="StateInputPin" />
+                <Pin Id="LdO8SApvXNzN4INQmOV49j" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="NXKJl8bScvOQa7fA797u1M" Name="Result" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Pad Id="T93o4gqgAwDLCQB5mLOtUI" Comment="Start" Bounds="276,385,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="275,555,193,83" Id="CANMqEhkZ1hOUb7YYSOZzm">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="If" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:NodeReference>
+            <Pin Id="E1ySEjUQrRgPd0YQwUGJY5" Name="Condition" Kind="InputPin" />
+            <Patch Id="S5gcTs7ljQPM3jULymr7cq" ManuallySortedPins="true">
+              <Patch Id="GY93WV2SxuxMwylkW7k7Cv" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="LXR4m04WP2pPRGRmRkhKy2" Name="Then" ManuallySortedPins="true" />
+              <Node Bounds="287,587,169,19" Id="F04kaCs83FbL9svKE3wybc">
+                <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognizer" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="StopContinuousRecognitionAsync" />
+                  <CategoryReference Kind="AssemblyCategory" Name="SpeechRecognizer" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="Di4zXMGnRhYO1UZESTuObX" Name="Input" Kind="StateInputPin" />
+                <Pin Id="DhLCXSuHRQBMkmLMQKXx8I" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="B7OxN5clj30NFFkWti18Vr" Name="Result" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Pad Id="KHnzay55xlJMtpf9Lv0pxf" Comment="Stop" Bounds="277,523,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="567,404,81,19" Id="Ugtv04bmzjGL8UmHKtSga7">
+            <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognizer" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="AssemblyCategory" Name="SpeechRecognizer" />
+              <Choice Kind="OperationCallFlag" Name="Recognized" />
+            </p:NodeReference>
+            <Pin Id="ERSy8mkKD6BMKjXDCQ670l" Name="Input" Kind="StateInputPin" />
+            <Pin Id="QiOxbwd6inPNvQ1MDX6D6F" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="455,264,159,19" Id="RvJGQ1GVRQGPqUF3XDVJzS">
+            <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechConfig" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="SetSpeechRecognitionLanguage" />
+            </p:NodeReference>
+            <Pin Id="A9vm8oBMng7Pt9LqWU1e6t" Name="Input" Kind="StateInputPin" />
+            <Pin Id="RuwJFPcogOJP1c9G7cX8DI" Name="Value" Kind="InputPin" DefaultValue="de-DE">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="OpVzjCIORpKMRKPmNtJQzX" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="PqrdregD1AINt1UkjF9nSP" Comment="" Bounds="612,249,37,15" ShowValueBox="true" isIOBox="true" Value="de-DE">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="444,726" Id="EHjeOKPnEmPMV2k2BLEZEa">
+            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MonoFlop" />
+            </p:NodeReference>
+            <Pin Id="GiZI7LdYSbCO5l0gybEqCd" Name="Set" Kind="InputPin" />
+            <Pin Id="D62mnomtidCOUtVOkaeCYJ" Name="Time" Kind="InputPin" />
+            <Pin Id="SBn23jaKON9L42oc275H9C" Name="Retriggerable" Kind="InputPin" />
+            <Pin Id="QEszHFUZMxgMzjyck8UpLB" Name="Reset" Kind="InputPin" />
+            <Pin Id="BBXv4bYWGujP8m45A6c3d4" Name="Value" Kind="OutputPin" />
+            <Pin Id="FFNvC2ScluVNsMxEcXposD" Name="Inverse Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="CQQ73OtjRgKLLOSCEtfPPx" Comment="" Bounds="438,770,35,35" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="A9utwrLFaqELEJK9JvF6O4" Name="Create" ParticipatingElements="BQi8dED7GxzOJFlo0RBRKl,OKf7pnQjSl6Ock1rZ14RVJ" />
+        <Patch Id="T8SkdLh7ZodQW6nQzCHBqA" Name="Update" />
+        <ProcessDefinition Id="D7XIbn2IsO5MoeuPPDB9V7">
+          <Fragment Id="HvMWEQjzkIsMYQ5YcLeA6e" Patch="A9utwrLFaqELEJK9JvF6O4" Enabled="true" />
+          <Fragment Id="VvoJIBdgaCsP6D0Va8t6nT" Patch="T8SkdLh7ZodQW6nQzCHBqA" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="HC71yd2zBRCMv2vQCsn4OA" Ids="DQy8tZ9iroPMy5AWUGqRDX,C28p4CINVnnOibbr44AUpc" IsHidden="true" />
+        <Link Id="VuxOYuRJziwNM7kJZUvgYY" Ids="FwtlLQ6a6aKOfgw3v7aa3u,HRy4bmi7wRkMHWaIyne3UJ" IsHidden="true" />
+        <Link Id="LF950191CdyObP5AH4fjV2" Ids="AJ6srgJdu6VLmkYPux3QKy,POXUtqdeqTnMKRMkKoAa0j" IsHidden="true" />
+        <Link Id="QWWWCS3ZyTBLr8VkF9uxPG" Ids="K6UFvSRisv4P26rODVwtjZ,GNe6r7mY1F5MqD9q1Jf5a4" />
+        <Link Id="RQi4Y6Ef2BpQQbiwXNL81y" Ids="SK0tpBq48ojPViqUghRiFZ,SyVIICQd6fNLjg9VWUAzPn" />
+        <Link Id="GfvO3McupQ3OEwiCsCgoTx" Ids="ScrpXXSRMlpQI9cXW1LmH1,FwtlLQ6a6aKOfgw3v7aa3u" />
+        <Link Id="HlGLwDFU4XNLQkUaVtR7nX" Ids="Lrdvh7PAzh0N0JIsebmIzq,AJ6srgJdu6VLmkYPux3QKy" />
+        <Link Id="IujXtJ4TUrCLPL8xKf9MLi" Ids="FLwcplfUo0YQLqxC6ef4yl,Md4bzgMo1sFOvahjJy5pLy" />
+        <Link Id="DereB8G0RvpMePiScj7D8N" Ids="NkEuhDAO5xaM1r4r32DTy8,OsB6J8vRs7fQKbJYOkN9EY" />
+        <Link Id="KPPIPOhQvc6PDZWvtDLvwF" Ids="H5hsCRT263uLnFOCxE1TfL,B7a4DFmcaA8LcSPQP4kRQ0" />
+        <Link Id="SXiL0UWCIgWOC5ZFIvVuvk" Ids="DmZJ6bAxNpOMGIucLn9n9c,GCsk88OfNjxLFgmJmacsy3" />
+        <Link Id="QrFxEfR6pwfNPgSsRSgr4L" Ids="U5VEldmZgS6LtrhKa5xfvb,PVFQZrO3VQONQzdfq83jac" />
+        <Link Id="UmMZhnU4E9XLSA0h9uPd5j" Ids="E4fm2GEduB8Lbs3M9eAc3C,EStLiCxUmSdOVxmUstPw1u" />
+        <Link Id="JL3Wgyi4y3UPDcdcknPoq9" Ids="EStLiCxUmSdOVxmUstPw1u,TMQxac9yQJfPbAXCQ5zHgk" />
+        <Link Id="BGdOn3dwlGNN4TpSPloBEl" Ids="T93o4gqgAwDLCQB5mLOtUI,VWCDS05EJNUQb6wrAJJWz8" />
+        <Link Id="CRBfRS9wtkFL87RsT1400A" Ids="EStLiCxUmSdOVxmUstPw1u,Di4zXMGnRhYO1UZESTuObX" />
+        <Link Id="FnWzfFxeXZaMPddinr0LOx" Ids="KHnzay55xlJMtpf9Lv0pxf,E1ySEjUQrRgPd0YQwUGJY5" />
+        <Link Id="OjtbFyoT6cuLNQw5xZEhc5" Ids="EStLiCxUmSdOVxmUstPw1u,ERSy8mkKD6BMKjXDCQ670l" />
+        <Link Id="CES97RzeXKmMc9W4nDkuKj" Ids="QiOxbwd6inPNvQ1MDX6D6F,AtnYq8NsLjsOZCKzAcH5gd" />
+        <Link Id="HhniAEAwEJEMVpyiCRXKSb" Ids="C28p4CINVnnOibbr44AUpc,TMjHxLt1emTNsZptjrs0t9" />
+        <Link Id="JMOcWApzJCvLcjfypeaBKM" Ids="GGH3jTNmX3YLm9Ckm90Asx,K9TPeiXYk7AN4qt5ESrbHY" />
+        <Link Id="TmheXEDfMTNN9q59wr4kfg" Ids="BRoDY90y2P8LGe2X58odR8,A3UwdusNHmaMrAE511cgzr" />
+        <Link Id="PzTXXKOYz3NQHl2CVnmhRo" Ids="I03cytXdjmnOa0T45rDh78,A9vm8oBMng7Pt9LqWU1e6t" />
+        <Link Id="CXv1Khyy1MbPn8pXv0p00G" Ids="OpVzjCIORpKMRKPmNtJQzX,QvVdR1tER2gLHutXYTtCpd" />
+        <Link Id="HJO7JiTVOQoNwVyx2rjgEr" Ids="PqrdregD1AINt1UkjF9nSP,RuwJFPcogOJP1c9G7cX8DI" />
+        <Link Id="CpOkaQF0l72MFsrI9vas7N" Ids="H5hsCRT263uLnFOCxE1TfL,GiZI7LdYSbCO5l0gybEqCd" />
+        <Link Id="Om4GxiBrzgGOsA27y2Th95" Ids="BBXv4bYWGujP8m45A6c3d4,CQQ73OtjRgKLLOSCEtfPPx" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="VqI422rddmTL77cXqOzsMw" Location="VL.Core" Version="2021.4.11-1176-gabb16f9839" />
+  <NugetDependency Id="AAlHlJ9AP4MQDFDjh3r23m" Location="Microsoft.CognitiveServices.Speech" Version="1.3.0" />
+  <NugetDependency Id="N79pRj4kEvQLvCDW3Z1HFz" Location="VL.Audio" Version="1.0.14" />
+</Document>

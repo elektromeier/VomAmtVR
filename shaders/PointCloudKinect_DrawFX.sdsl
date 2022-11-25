@@ -1,0 +1,91 @@
+// ported from Vux's DX11 point sprites patch
+
+shader PointCloudKinect_DrawFX : VS_PS_Base, Texturing
+{
+	[Color]
+    float4 Color = float4(1, 0, 0, 1);
+    float Amount; //fudge
+    float4x4 kinect;
+	float4x4 BoundTrans;
+	float4x4 GlobalTrans;
+    float SpriteSize  = 0.01f;
+	float ThreshHinten = 0;
+	float ThreshVorne = 0;
+	float ThreshUnten = 0;
+    float ThreshRechts = 0;
+	float ThreshLinks = 0;
+    stream float2 TexCoordQuad;
+    stream float4 NewPos;
+    static const float3 QuadPositions[4] = {
+        float3(-1, 1, 0),
+        float3( 1, 1, 0),
+        float3(-1, -1, 0),
+        float3( 1, -1, 0),
+    };
+
+    static const float2 QuadUV[4] = {
+        float2(0,1), 
+        float2(1,1),
+        float2(0,0),
+        float2(1,0)
+    };
+
+    override stage void VSMain() 
+    {
+        // get depth
+    	float displace =  Texture0.SampleLevel(LinearSampler, streams.TexCoord, 0).r;
+
+        // the deapth is stretched by the view cone so sqrt
+    	streams.PositionWS = float4(streams.Position.xy, sqrt(displace * Amount), streams.Position.w); 
+
+        // apply kinect and world transformation
+        streams.PositionWS = mul(streams.PositionWS, mul(kinect, World));
+		//streams.PositionWS = mul(streams.PositionWS, kinect);
+    }
+ 
+    [maxvertexcount(4)]
+    void GSMain(point Input input[1], inout TriangleStream<Output> gsout)
+    {
+        streams = input[0];
+		
+		//float4 roomPos = mul(BoundTrans, streams.PositionWS);
+	   float4 roomPos = mul(BoundTrans, mul(streams.PositionWS,GlobalTrans));
+
+        // place position into view space
+        float4 viewPos = mul(streams.PositionWS, View); 
+
+        for (int i = 0; i < 4; i++)
+        {
+			float sizefactor = 1;
+			
+
+				
+            // sprite pos
+            float3 p = QuadPositions[i] * SpriteSize * 0.01 * sizefactor;
+						
+			
+            // add quad pos in view space and project vertex
+            streams.ShadingPosition = mul(viewPos + float4(p, 0), Projection);
+
+            streams.TexCoordQuad = QuadUV[i];
+			
+			//if (roomPos.z < ThreshHinten && roomPos.z >ThreshVorne && roomPos.y > ThreshUnten && roomPos.x < ThreshRechts   )
+           if (roomPos.z < ThreshHinten && roomPos.z >ThreshVorne && roomPos.x < ThreshRechts && roomPos.x > ThreshLinks && roomPos.y > ThreshUnten)
+			gsout.Append(streams);
+        }
+
+        gsout.RestartStrip();
+    }
+   
+
+    override stage void PSMain() 
+    {
+        
+        float2 d = streams.TexCoordQuad - 0.5f;
+        if (dot(d, d) > 0.25f) discard; // fast circles with length squared
+		float4 col = Texture1.Sample(LinearSampler, streams.TexCoord); //erzeugt auch einen zweiten texture pin
+        streams.ColorTarget = col * Color; // Uncomment to get a texture input
+
+    }
+};
+

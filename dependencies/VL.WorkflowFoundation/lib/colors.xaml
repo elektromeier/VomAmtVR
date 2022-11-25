@@ -1,0 +1,10 @@
+<ResourceDictionary x:Uid="ResourceDictionary_1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation">
+    <SolidColorBrush x:Uid="SolidColorBrush_20" x:Key="{x:Static sap:WorkflowDesignerColors.DesignerViewShellBarControlBackgroundColorKey}" Color="Gray"/>
+    <SolidColorBrush x:Uid="SolidColorBrush_21" x:Key="{x:Static sap:WorkflowDesignerColors.DesignerViewShellBarColorGradientBeginKey}" Color="Gray"/>
+    <SolidColorBrush x:Uid="SolidColorBrush_22" x:Key="{x:Static sap:WorkflowDesignerColors.DesignerViewShellBarColorGradientEndKey}" Color="Gray"/>
+    <SolidColorBrush x:Uid="SolidColorBrush_24" x:Key="{x:Static sap:WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientBeginKey}" Color="LightGray"/>
+    <SolidColorBrush x:Uid="SolidColorBrush_25" x:Key="{x:Static sap:WorkflowDesignerColors.DesignerViewShellBarSelectedColorGradientEndKey}" Color="LightGray"/>
+</ResourceDictionary>

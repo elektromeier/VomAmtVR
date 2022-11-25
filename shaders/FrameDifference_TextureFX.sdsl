@@ -1,0 +1,33 @@
+// source:
+// 
+
+[Category("Filter.Experimental")]
+[Summary("")]
+shader FrameDifference_TextureFX : FilterBase
+{
+	float4 Boost=0;
+	bool Signed=false;
+	bool Alpha=false;
+	bool BW_COL=false;
+	float lambda = 0.;
+	float Threshold = 0;
+	
+    float4 Filter(float4 tex0col)
+    {	
+	
+	float2 uv = streams.TexCoord;
+	float4 pre = Texture1.Sample(Sampler0, uv);
+    float4 cur = Texture0.Sample(Sampler0, uv);
+	float4 Mag= sqrt(pre*pre+cur*cur+float4(lambda, lambda, lambda, lambda));
+	float4 c=(pre-cur)*pow(2,Boost);
+	c=c/Mag;
+	float4 m= (c.r+c.g+c.b)/3;
+	if (!BW_COL) c=m;
+	if(!Signed)c=abs(c);
+	if(!Alpha)c.a=cur.a;
+	if(c.r < Threshold || c.g < Threshold || c.b < Threshold) c.rgb=0;
+    return c;
+         
+
+    }
+};

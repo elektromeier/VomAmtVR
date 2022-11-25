@@ -1,0 +1,48 @@
+
+
+[Category("Filter")]
+[Summary("")]
+shader RGBDepthRepair_TextureFX : TextureFX
+{
+
+	stage override float4 Shading()
+    {	
+	
+	float2 R = ViewSize;
+	float2 uv = streams.TexCoord;
+	
+	float4 c = Texture0.Sample(Sampler0,uv);
+	
+	int counter = 0;
+	if ( c.r < 0.00000001f &&  c.g < 0.00000001f ){
+		
+		for(int dX = -2; dX <= 2; dX++) {
+			for(int dY = -2; dY <= 2; dY++) {	
+				
+				// We do not want to consider the candidate pixel
+				if(dX != 0 || dY != 0){
+					
+					float2 offset = float2(float(dX), float(dY));
+					float3 cBand = Texture0.SampleLevel(Sampler0,uv + offset/R,0).xyz;
+					
+					// we only look for non-zero pixels
+					if (cBand.r > 0.00000001f || cBand.g > 0.00000001f){
+						c.r += cBand.x;
+						c.g += cBand.y;
+						counter++;
+					}
+				}
+				
+			}	
+		}
+		c.r /= counter;
+		c.g /= counter;
+		
+	}
+	
+	
+	
+	return c;
+
+    }
+};

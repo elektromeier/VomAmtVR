@@ -1,0 +1,22 @@
+
+
+[Category("Filter")]
+[Summary("")]
+shader MapRGBToDepth_TextureFX : TextureFX
+{	float2 Offset= (0,0);
+
+	stage override float4 Shading()
+    {	
+	float2 R = ViewSize;
+	float2 uv = streams.TexCoord;
+	float halfPixel = (1.0f / R.x) * 0.5f;
+	uv += halfPixel+Offset;
+	
+	float4 drgb = Texture1.Sample(Sampler1,uv);
+
+	float4 c = Texture0.Sample(Sampler0,drgb.rg);
+	
+    return c;
+
+    }
+};

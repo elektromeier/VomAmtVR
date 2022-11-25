@@ -1,0 +1,34 @@
+// source:
+// 
+
+[Category("Filter")]
+[Summary("")]
+shader FrameDifferenceDepth_TextureFX : TextureFX
+{
+	float4 Boost=0;
+	float Gain=1;
+	float lambda = 0.;
+	
+    stage override float4 Shading()
+    {	
+	
+	float2 uv = streams.TexCoord;
+	float4 wT = Texture2.Sample(Sampler0, uv);
+	float4 pre = Texture1.Sample(Sampler0, uv);
+    float4 cur = Texture0.Sample(Sampler0, uv);
+	float4 Mag= sqrt(pre.r*pre.r+cur.r*cur.r+float4(lambda, lambda, lambda, lambda));
+	float4 c=(pre.r-cur.r)*Boost;
+	c=c/Mag;
+	float4 m= (c.r);
+	
+	
+	//c.gb=0;
+	c=m;
+	c*=Gain;
+	c.a=1;
+	if (wT.r>0) c.rgb=0;
+    return c;
+         
+
+    }
+};
