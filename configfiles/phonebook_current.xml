@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<subscribers>
+		
+	
+	<subscriber prefixnumber="23" number="23" active="TRUE">
+		<firstname>Rosa</firstname>
+		<lastname>Dreyfus-Hemmendinger</lastname>
+		<sex>female</sex>
+		<companyname>Modehaus</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="41" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="56" specialcase="spelling" scprobability="0.2"/>
+		</personaldirectory>
+	</subscriber>
+	
+	<subscriber prefixnumber="23" number="40" active="FALSE">
+		<firstname>Charles</firstname>
+		<lastname>Durand</lastname>
+		<sex>male</sex>
+		<companyname></companyname>
+		<profession>Pfarrer</profession>
+		<phonebookinfo pageindex="41" xycoords="" boxsize=""/>
+		<personaldirectory>
+		<subscriber number="28" specialcase="spelling" scprobability="0.1"/>
+		</personaldirectory>
+	</subscriber>
+	
+	
+	
+	
+	<subscriber prefixnumber="23" number="56" active="TRUE">
+		<firstname>Leon</firstname>
+		<lastname>Levy</lastname>
+		<sex>male</sex>
+		<companyname>Schuhwaren en gros</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="70" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="22" specialcase="" scprobability="0"/>
+		</personaldirectory>
+	</subscriber>
+	
+	
+	<subscriber prefixnumber="23" number="86" active="TRUE">
+		<firstname>Hermann</firstname>
+		<lastname>Meyer-Wenger</lastname>
+		<sex>male</sex>
+		<companyname></companyname>
+		<profession>Spenglermeister</profession>
+		<phonebookinfo pageindex="77" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="10" specialcase="" scprobability="0"/>
+		</personaldirectory>
+	</subscriber>
+	
+	
+	<subscriber prefixnumber="23" number="22" active="TRUE">
+		<firstname>Oskar</firstname>
+		<lastname>Ruetsch</lastname>
+		<sex>male</sex>
+		<companyname>Herren-Konfektion</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="94" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="23" specialcase="" scprobability="0"/>
+		</personaldirectory>
+	</subscriber>
+	
+	<subscriber prefixnumber="23" number="66" active="TRUE">
+		<firstname>Carl</firstname>
+		<lastname>Schmid-Dubied</lastname>
+		<sex>male</sex>
+		<companyname></companyname>
+		<profession>Photograph</profession>
+		<phonebookinfo pageindex="98" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="23" specialcase="" scprobability="0"/>
+		</personaldirectory>
+	</subscriber>
+	
+	<subscriber prefixnumber="23" number="28" active="TRUE">
+		<firstname>Ed.</firstname>
+		<lastname>Stalder</lastname>
+		<sex>male</sex>
+		<companyname>Glas- u. Gebäudereinigungs-Anstalt</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="106" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="92" specialcase="" scprobability="0"/>
+		</personaldirectory>
+	</subscriber>
+	
+	<subscriber prefixnumber="23" number="04" active="TRUE">
+		<firstname></firstname>
+		<lastname></lastname>
+		<sex></sex>
+		<companyname>Textilveredelung A.-G.</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="110" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="66" specialcase="profession" scprobability="0.5"/>
+		</personaldirectory>
+	</subscriber>
+	
+	<subscriber prefixnumber="23" number="92" active="TRUE">
+		<firstname>E.</firstname>
+		<lastname>Seiler</lastname>
+		<sex>male</sex>
+		<companyname>Haushaltungsartikel und Eisenwaren</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="292" xycoords="" boxsize=""/>
+		<personaldirectory>
+			<subscriber number="86" specialcase="similarname" scprobability="0.5"/>
+			<subscriber number="10" specialcase="" scprobability="0"/>
+		</personaldirectory>
+	</subscriber>
+	
+		
+	<subscriber prefixnumber="23" number="10" active="FALSE">
+		<firstname></firstname>
+		<lastname></lastname>
+		<sex>male</sex>
+		<companyname>Gemeinde-Verwaltung</companyname>
+		<profession></profession>
+		<phonebookinfo pageindex="294" xycoords="" boxsize=""/>
+		<personaldirectory>
+		</personaldirectory>
+	</subscriber>
+
+</subscribers>

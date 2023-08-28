@@ -1,0 +1,30 @@
+Hello	2	calm, angry, annoyed	Hallo, ist da jemand? Hallo hören sie mich? Hallo.... Hallo?	Keine Reaktion der Telefonistin	0	1	1		Nummer bitte
+CallerGaveNumber	1	calm, angry, annoyed	Nummer (je nach Wunsch)	Anrufer weiss Nummer	1	1	1		
+CallerGaveName	1	calm, angry, annoyed	Namen  (je nach Wunsch)	Anrufer weiss Namen	1	1	1		Bitte suchen Sie die Nummer im Abonnentenverzeichnis ODER Ich schaue die Nummer nach
+WrongNumberRepeated	1	calm, angry, annoyed	Nein, die Nummer XXX!	Telefonistin hat die Nummer falsch verstanden/wiederholt	1	1	1		
+SpecialcaseSimilarName	2	calm, angry, annoyed	Der Meier mit ei, E wie emil, I wie Igel	Anrufer spezifiert einen Teil des Namens (zb. ei ode ey) genauer	1	1	1		
+SpecialcaseSpelling	2	calm, angry, annoyed	M wie Mond, E wie Emil, Y wie Yverdon...	Anrufer buchstabiert den ganzen Namen	1	1	1		
+SpecialcaseProfession	2	calm, angry, annoyed	Der Metzger Meier!	Anrufer nennt Beruf	1	1	1		
+NegativeLookupReaction	3	calm, angry, annoyed	zb Wofür sind Sie denn da? ich habe keine Zeit für solche Banalitäten.	Reaktion auf die Aufforderungen der Telefonistin die Nummer nachzuschlagen.	0	1	1		
+PositiveLookupReaction	1	calm, angry, annoyed	zb: ok, dann schaue ich selber nach: die Nummer ist 25	Reaktion auf die Aufforderungen der Telefonistin die Nummer nachzuschlagen. Anrufer sucht sie selber und nennt sie (mehr oder weniger genervt).	1	1	1		
+OpSearchNumber	2	calm, angry, annoyed	zb: Endlich! / Das ging aber lange! / Ich dachte schon das wird nie etwas	Reaktion auf die Nummernrecherche der Telefonistin : "Ich schaue die nummer nach: Die Nummer ist ..."	0	1	1		Ich schaue die Nummer nach
+RecAway	2	calm, angry, annoyed	zb: macht nichts / ich versuche es später nochmal	Reaktion auf Antwort der Telefonistin: "Die Nummer antwortet leider nicht" auch beim besetztzeichen	0	1	1		
+ClientsTalking	2	calm, angry, annoyed	Freies Gespräch zwischen X und Y	Gespräch zwischen den zwei Telefonierenden beginnt	1	1	1		
+TargetAnswering	1	calm, angry, annoyed	Hier Meier?	Gewünschte Nummer antwortet mit seinem Namen	1	1	1		
+WrongTarget	2	calm, angry, annoyed	Hier ist xxx Sie sind falsch verbunden!	Telefonistin hat eine falsche Nummer verbunden	0	1	1		
+Idle	1			Idle zustand	0	0	0		
+IsCalling	1			Ruft an und entsprechendes lämpchen Leuchten	0	0	0	Freies, rotes Kabel in leuchtende Ziffer stecken und roten Kippschalter nach oben legen!	
+WaitingList	1			Ruft gleich nochmals an	0	0	0		
+ConToOp	1			Mit Zentrale verbunden und wartet auf antwort der zentrale	0	0	0		Nummer bitte
+WaitCallerTurn	1			Zwischenstate, hebel nach unten um bein rec klingeln zu lasen	0	0	0		
+SomethingRepeated	1			Nummer wird geprüft ob richtig	0	0	0	Nummer wiederholen und Schwarzes Kabel in richtige Nummer stecken!	NUMBER
+WaitRecAnswer	1			entscheiden ob nächster state busy oder free tone	0	0	0	roten Kippschalter nach unten bewegen um anzurufen	
+FreeTone	1			Freizeichen. entscheiden ob jemand da (next state 	0	0	1		
+BusyTone	1			Besetztzeichen	0	0	1		
+RecAnswerToLong	1			es ist frei aber niemand nimmt ab.zentrale sagt: Es nimmt leider niemand ab oder ähnlich	0	0	0	Roten Kippschalter nach oben bewegen um zu sprechen	Die Nummer antwortet leider nicht
+OpBusyAnswer	1			Zentrale sagt: es ist leider besetzt.	0	0	0	Roten Kippschalter nach oben bewegen um zu sprechen	Die Nummer ist leider besetzt
+SpecialcaseOpRequest	1			Die Telefonistin fragt nach je nach special case: Buchstabieren oder zwei Personen mit gleichem Namen	0	0	0		SPECIALCASE
+Hangup	1			Anrufer hat abgeläutet, Rote lampe leuchten auf und Telefonistin kann abrechnen				Bitte rotes und schwarzes Kabel für diesen Anruf austecken	
+WrongRecConnected	1			Telefonistin hat falsch verbunden, im Moment nicht implementiert					
+OpReadsNumber	1			Telefonistin wiederholt nummer aus telefonbuch, aehnliech wie something repeated	0	0	0	Bitte Namen im Telefonbuch suchen und Nummer vorlesen.	
+ConToRec	1			Schwarzes Kabel in richtigen Slot gesteckt	0	0	0	Bitte schwarzes Kabel in vom Anrufer genannte Nummer stecken	

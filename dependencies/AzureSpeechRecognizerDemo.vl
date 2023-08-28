@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="FvSNCA7f3G6QUC1lMvj8zd" LanguageVersion="2021.4.11.1176" Version="0.128">
-  <NugetDependency Id="DBoSf4fFsQ3N0r4yjNOmpo" Location="VL.CoreLib" Version="2021.4.11-1176-gabb16f9839" />
+<Document xmlns:p="property" Id="FvSNCA7f3G6QUC1lMvj8zd" LanguageVersion="2021.4.12.1374" Version="0.128">
+  <NugetDependency Id="DBoSf4fFsQ3N0r4yjNOmpo" Location="VL.CoreLib" Version="2021.4.12" />
   <Patch Id="BxuZffE323xNepBnPacDtv">
     <Canvas Id="VM74e57tLScO60P3ywNhIc" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -26,7 +26,7 @@
             <Pin Id="I03cytXdjmnOa0T45rDh78" Name="Result" Kind="OutputPin" />
           </Node>
           <Node Bounds="455,303,81,19" Id="OKf7pnQjSl6Ock1rZ14RVJ">
-            <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognizer" LastSymbolSource="Microsoft.CognitiveServices.Speech.csharp.dll">
+            <p:NodeReference LastCategoryFullName="Microsoft.CognitiveServices.Speech.SpeechRecognizer" LastDependency="Microsoft.CognitiveServices.Speech.csharp.dll">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="AssemblyCategory" Name="SpeechRecognizer" />
               <Choice Kind="OperationCallFlag" Name="Create" />
@@ -36,7 +36,7 @@
           </Node>
           <Pad Id="EStLiCxUmSdOVxmUstPw1u" Bounds="457,360" />
           <Node Bounds="537,691,65,19" Id="GePs3kpWJQpMN3onhugvTN">
-            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
             </p:NodeReference>
@@ -47,7 +47,7 @@
             <Pin Id="H5hsCRT263uLnFOCxE1TfL" Name="On Data" Kind="OutputPin" />
           </Node>
           <Node Bounds="567,450,190,213" Id="M0MXvaNH5HeNdsNNF0B5vB">
-            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ProcessAppFlag" Name="ForEach (Keep)" />
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
             </p:NodeReference>
@@ -99,7 +99,7 @@
                 <Pin Id="ScrpXXSRMlpQI9cXW1LmH1" Name="Text" Kind="OutputPin" />
               </Node>
               <Node Bounds="579,475,62,19" Id="RmsqBfev58UMbuAc0nPZ0l">
-                <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastSymbolSource="VL.Reactive.vl">
+                <p:NodeReference LastCategoryFullName="Reactive.EventPattern" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="RecordType" Name="EventPattern" />
                   <Choice Kind="OperationCallFlag" Name="EventArgs" />
@@ -122,17 +122,17 @@
           <Pad Id="OsB6J8vRs7fQKbJYOkN9EY" Comment="" Bounds="539,771,282,97" ShowValueBox="true" isIOBox="true" />
           <Pad Id="B7a4DFmcaA8LcSPQP4kRQ0" Comment="On Data" Bounds="599,725,35,35" ShowValueBox="true" isIOBox="true" />
           <Pad Id="DmZJ6bAxNpOMGIucLn9n9c" Comment="Subscription Key" Bounds="457,189,259,9" ShowValueBox="true" isIOBox="true" Value="f2d8abd93fee4bfe853e15840a759938">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="U5VEldmZgS6LtrhKa5xfvb" Comment="Region" Bounds="549,212,107,11" ShowValueBox="true" isIOBox="true" Value="switzerlandnorth">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="274,424,194,83" Id="LYCRoMoXhk9OjYW2fv2YMJ">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="If" />
               <FullNameCategoryReference ID="Primitive" />
@@ -154,7 +154,7 @@
             </Patch>
           </Node>
           <Pad Id="T93o4gqgAwDLCQB5mLOtUI" Comment="Start" Bounds="276,385,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -162,7 +162,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="275,555,193,83" Id="CANMqEhkZ1hOUb7YYSOZzm">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="If" />
               <FullNameCategoryReference ID="Primitive" />
@@ -184,7 +184,7 @@
             </Patch>
           </Node>
           <Pad Id="KHnzay55xlJMtpf9Lv0pxf" Comment="Stop" Bounds="277,523,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -207,19 +207,19 @@
             </p:NodeReference>
             <Pin Id="A9vm8oBMng7Pt9LqWU1e6t" Name="Input" Kind="StateInputPin" />
             <Pin Id="RuwJFPcogOJP1c9G7cX8DI" Name="Value" Kind="InputPin" DefaultValue="de-DE">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="OpVzjCIORpKMRKPmNtJQzX" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="PqrdregD1AINt1UkjF9nSP" Comment="" Bounds="612,249,37,15" ShowValueBox="true" isIOBox="true" Value="de-DE">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="444,726" Id="EHjeOKPnEmPMV2k2BLEZEa">
-            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="MonoFlop" />
             </p:NodeReference>
@@ -268,7 +268,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="VqI422rddmTL77cXqOzsMw" Location="VL.Core" Version="2021.4.11-1176-gabb16f9839" />
-  <NugetDependency Id="AAlHlJ9AP4MQDFDjh3r23m" Location="Microsoft.CognitiveServices.Speech" Version="1.3.0" />
+  <NugetDependency Id="VqI422rddmTL77cXqOzsMw" Location="VL.Core" Version="2021.4.12" />
+  <NugetDependency Id="AAlHlJ9AP4MQDFDjh3r23m" Location="Microsoft.CognitiveServices.Speech" Version="1.24.1" />
   <NugetDependency Id="N79pRj4kEvQLvCDW3Z1HFz" Location="VL.Audio" Version="1.0.14" />
 </Document>
