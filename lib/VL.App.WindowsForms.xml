@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VL.App.WindowsForms</name>
+    </assembly>
+    <members>
+        <member name="T:VL.App.WindowsForms.WindowsFormsMainLoopTimer">
+            <summary>
+            Inaccurate timer implementation using a windows forms <see cref="T:System.Windows.Forms.Timer"/> internally.
+            </summary>
+        </member>
+        <member name="E:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Tick">
+            <summary>
+            Occurs when the Timer has completed one interval.
+            </summary>
+        </member>
+        <member name="M:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Start">
+            <summary>
+            Starts the timer.
+            </summary>
+        </member>
+        <member name="M:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Stop">
+            <summary>
+            Stops timer.
+            </summary>
+        </member>
+        <member name="M:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Dispose">
+            <summary>
+            Frees timer resources.
+            </summary>
+        </member>
+        <member name="P:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Interval">
+            <summary>
+            Gets or sets the time between Tick events.
+            </summary>
+        </member>
+        <member name="P:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Mode">
+            <summary>
+            Gets or sets the timer mode.
+            </summary>
+        </member>
+        <member name="P:VL.App.WindowsForms.WindowsFormsMainLoopTimer.Increment">
+            <summary>
+            Gets or sets the time increment. Used when <see cref="P:VL.App.WindowsForms.WindowsFormsMainLoopTimer.IsIncremental"/> is set to true.
+            </summary>
+        </member>
+        <member name="P:VL.App.WindowsForms.WindowsFormsMainLoopTimer.IsRunning">
+            <summary>
+            Gets a value indicating whether the Timer is running.
+            </summary>
+        </member>
+    </members>
+</doc>
