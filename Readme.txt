@@ -1,13 +1,13 @@
 The assets folder is not on github as its quite huge (Around 3GB). please download it from here: 
 https://www.bubenhofer.com/telefonzentrale/ 
-
 and copy the folder "assets" right in the apps main folder, next to this readme file.
+Note that the assets folder is not on github as its quite huge (around 3GB). please download it from here: (we need to find a webspace for this) and copy it in the apps main folder next to this readme file.
 
-The assets folder is not on github as its quite huge (around 3GB). please download it from here: (we need to find a webspace for this) and copy it in the apps main folder next to this readme file.
-
-For the speech recognition you need a microsoft azure key. In the "configfiles" folder which is in the main app folder you find a file named: "AzureAccountTemplate.xml". Copy that file and rename it to: "AzureAccount.xml". Then edit that file with the informations you have from your azure account and save it.
+For the speech recognition you need a microsoft azure key. In the "configfiles" folder which is in the main app folder you find a file named: "SettingsTemplate.xml". Copy that file and rename it to: "Settings.xml". Please add the informations you got from your azure account and save the settings.xml.
 
 also you need at least one microphone activated as windows main audio input. usually this is the VR Headsets microphone.
+
+install all the fonts included under assets/fonts to your system.
 
 More information to the project:
 https://www.ds.uzh.ch/de/projekte/vr.html

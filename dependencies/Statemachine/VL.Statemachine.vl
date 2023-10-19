@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="EcbVwhyqSsuLb52s2jR5Jy" LanguageVersion="2021.4.12.1374" Version="0.128">
-  <NugetDependency Id="BUOMgose7ncOMZjMEvBLaz" Location="VL.CoreLib" Version="2021.4.12" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="EcbVwhyqSsuLb52s2jR5Jy" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
+  <NugetDependency Id="BUOMgose7ncOMZjMEvBLaz" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
   <Patch Id="Hk8dN66HufhLrA5JIZd0zD">
     <Canvas Id="UhaLTarbzO5NAHT85F0NwS" DefaultCategory="Statemachine" CanvasType="FullCategory">
       <!--
@@ -600,6 +600,7 @@
                     <CategoryReference Kind="ClassType" Name="DummyState" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                   </p:NodeReference>
+                  <Pin Id="H8axeCdvprhNCJS8iRDpF7" Name="Node Context" Kind="InputPin" IsHidden="true" />
                   <Pin Id="L9tdKnNv2MIO3K5dJi0iyz" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <ControlPoint Id="SpoAyz0m9EyPIwJyFH4Avj" Bounds="593,339" />
@@ -714,7 +715,7 @@
                 <Patch Id="TNncvZQCqlhNFaGWBpB1t1" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="LgonU0BSyIUN57hJyJ0p8B" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="348,431,54,26" Id="TxaBcJPeHkRMSFZszNCEzX">
-                  <p:NodeReference LastCategoryFullName="System.Object" LastSymbolSource="System.Runtime.dll">
+                  <p:NodeReference LastCategoryFullName="System.Object" LastDependency="System.Runtime.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetType" />
                     <CategoryReference Kind="AssemblyCategory" Name="Object" NeedsToBeDirectParent="true" />
@@ -758,6 +759,7 @@
                     <Choice Kind="OperationCallFlag" Name="Name" />
                   </p:NodeReference>
                   <Pin Id="HxShRcAGJdRNMPjqo7U1UW" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Gc4Bglz5VG4NPeTxS22s09" Name="Output" Kind="OutputPin" IsHidden="true" />
                   <Pin Id="BqUWqWXWZipOwqe2etC5XS" Name="Name" Kind="OutputPin" />
                 </Node>
               </Patch>
@@ -814,7 +816,7 @@
                 <Patch Id="HqtNKoCvgx7Pm1XgUzqTP7" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="NVPG8GJ0RcOLhLpfOevVB6" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="613,512,105,26" Id="DLrcBeZvkM4MWqWHLtYdep">
-                  <p:NodeReference LastCategoryFullName="System.Type" LastSymbolSource="System.Runtime.dll">
+                  <p:NodeReference LastCategoryFullName="System.Type" LastDependency="System.Runtime.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="AssemblyCategory" Name="Type" />
                     <Choice Kind="OperationCallFlag" Name="InvokeMember" />
@@ -834,7 +836,7 @@
                   </p:TypeAnnotation>
                 </Pad>
                 <Node Bounds="549,457,54,26" Id="Co8kAbUr7wyOPGyskGCJZj">
-                  <p:NodeReference LastCategoryFullName="System.Object" LastSymbolSource="System.Runtime.dll">
+                  <p:NodeReference LastCategoryFullName="System.Object" LastDependency="System.Runtime.dll">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetType" />
                     <CategoryReference Kind="AssemblyCategory" Name="Object" NeedsToBeDirectParent="true" />
@@ -893,7 +895,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="Rw5PYUqYDquLWmjHwGqnuH" Location="VL.CoreLib" Version="2021.4.12" />
   <PlatformDependency Id="BiN6c1iNTL3Pc6zK8UmgiN" Location="System.Reflection" />
   <PlatformDependency Id="TCJkwRWz5wdMXNmItjCX1C" Location="System.Runtime" />
   <PlatformDependency Id="RGbUf4j27M2N8n9uAxD3Xe" Location="mscorlib" />

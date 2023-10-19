@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="J6DOF00x2QYOF4kfkODrit" LanguageVersion="2021.4.12.1374" Version="0.128">
-  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2021.4.12" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="J6DOF00x2QYOF4kfkODrit" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
     <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -22,6 +22,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="StateManager" />
               </p:NodeReference>
+              <Pin Id="U9gJpCwc1HdNnEuPKBQcQe" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="ElNsBKWM4OEP8SzBmpySNC" Name="Output" Kind="OutputPin" />
               <Pin Id="DmnmAYYc0swNCXnUGIWimz" Name="State Name" Kind="OutputPin" />
             </Node>
@@ -50,6 +51,7 @@
                   <p:OuterCategoryReference Kind="Category" Name="MyMachine" NeedsToBeDirectParent="true" />
                 </CategoryReference>
               </p:NodeReference>
+              <Pin Id="J1oVAlOrHDKP1JdTJ4TdwJ" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="SOwlo1EKThtNQW6aUjMmt8" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="-356,222,56,26" Id="UhUfvRMQgiwMpA7YsX08zx">
@@ -100,6 +102,8 @@
                 <Choice Kind="ProcessAppFlag" Name="S+H" />
                 <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
               </p:NodeReference>
+              <Pin Id="HerKz0UHAQeLyWHqwrnRhw" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="DnzV8wrSXiOMgrC9H9SfhK" Name="Initial Value" Kind="InputPin" IsHidden="true" />
               <Pin Id="J5cPm2tWHoZLfJVCHkOtc9" Name="Value" Kind="InputPin" />
               <Pin Id="HryeuDtA8vHMrH06qY0bkI" Name="Sample" Kind="InputPin" />
               <Pin Id="VXJxTENuna9ODdwSnuLyHA" Name="Value" Kind="OutputPin" />
@@ -174,6 +178,8 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Changed" />
               </p:NodeReference>
+              <Pin Id="VfTLR0q2XoMQWsbOUJ5dyh" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="K4srPHMlKVXN1KYTMl7eAd" Name="Changed On Create" Kind="InputPin" IsHidden="true" />
               <Pin Id="GtS2Db0npd4LckfSKwx9U4" Name="Value" Kind="InputPin" />
               <Pin Id="MeTuO0Z6AOqNAf1sKjEKYJ" Name="Result" Kind="OutputPin" />
               <Pin Id="BdK5U2CvYrOMUPhrXf0SvR" Name="Unchanged" Kind="OutputPin" />
@@ -281,7 +287,7 @@
             <ControlPoint Id="EgK8BapPHIcLLjwPPjME6z" Bounds="2053,248" />
             <ControlPoint Id="IDn2Uo1rqnwPVAKbuGbxul" Bounds="2084,269" />
             <ControlPoint Id="DTzkno8XKusPH0eTz5N87q" Bounds="2184,175" />
-            <Node Bounds="589,240" Id="MnoWwEUlV3DQdjhrQe5s3R">
+            <Node Bounds="589,240,45,19" Id="MnoWwEUlV3DQdjhrQe5s3R">
               <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Random" />
@@ -293,18 +299,20 @@
             </Node>
             <ControlPoint Id="QkNwCsTDMUiLQsmPsPhMpD" Bounds="582,132" />
             <ControlPoint Id="M6Zf2fWps7QOKqE0tQpEwX" Bounds="622,102" />
-            <Node Bounds="599,297" Id="HKkZwujswcsP4fr8O9Qyy8">
+            <Node Bounds="599,297,25,19" Id="HKkZwujswcsP4fr8O9Qyy8">
               <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="S+H" />
                 <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
               </p:NodeReference>
+              <Pin Id="HEYhjBtXcjeONbADEMYgaV" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="C3BCm88WUcjL5Y5QjvUJsk" Name="Initial Value" Kind="InputPin" IsHidden="true" />
               <Pin Id="TgFH9Z59F1VMmKQAALlXKG" Name="Value" Kind="InputPin" />
               <Pin Id="MXXzhoyo8wWQa4GTtGjNc2" Name="Sample" Kind="InputPin" />
               <Pin Id="Vfpe9UOLKspPuPCfzHdZlX" Name="Value" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="MWt1v1GwwpSP7WRxykjZZ6" Bounds="601,562" />
-            <Node Bounds="701,533" Id="GeuEi7igizrMcdQTzhZxxN">
+            <Node Bounds="701,533,25,19" Id="GeuEi7igizrMcdQTzhZxxN">
               <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="-" />
@@ -969,6 +977,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="I" />
               </p:NodeReference>
+              <Pin Id="TIHYXPDcWb3NUt2nBBWnxB" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="RTYI3YKEjexPEBKrJFcAkV" Name="Start" Kind="InputPin" />
               <Pin Id="AaJH4emEwvnQINRrwNnK5x" Name="Count" Kind="InputPin" />
               <Pin Id="HcxIVlmnGirMTGOCMhhN77" Name="Output" Kind="OutputPin" />
@@ -1030,6 +1039,8 @@
                 <Choice Kind="ProcessAppFlag" Name="S+H" />
                 <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
               </p:NodeReference>
+              <Pin Id="MSDcRJ8M01fM3BvaU0g6zI" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="PAVphwk8kfWQBug2vmFyf5" Name="Initial Value" Kind="InputPin" IsHidden="true" />
               <Pin Id="R8oS968H2H0LvH0TRC9J0g" Name="Value" Kind="InputPin" />
               <Pin Id="D7gXfo1L2NWQZyHOZla4LH" Name="Sample" Kind="InputPin" />
               <Pin Id="FGB9aedoeg8LuSM3DX5HN9" Name="Value" Kind="OutputPin" />
@@ -1299,6 +1310,11 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Stopwatch" />
               </p:NodeReference>
+              <Pin Id="GExTSSxJZmiN2soBng5kNW" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="HbRIgst8C02NsIoWVXFtEw" Name="Clock" Kind="InputPin" IsHidden="true" />
+              <Pin Id="PxhZ55i72vmMxrkZJ22TIf" Name="Time" Kind="InputPin" IsHidden="true" />
+              <Pin Id="P5hhy8prE3nOng2S6olHmg" Name="New Clock" Kind="InputPin" IsHidden="true" />
+              <Pin Id="IpYBAq6SmFiQJVMrU8QLHt" Name="New Time" Kind="InputPin" IsHidden="true" />
               <Pin Id="E5wk2lIQl5EOuxqdbCcDrY" Name="Enabled" Kind="InputPin" DefaultValue="True">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="TypeFlag" Name="Boolean" />
@@ -1368,6 +1384,8 @@
                 <Choice Kind="ProcessAppFlag" Name="S+H" />
                 <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
               </p:NodeReference>
+              <Pin Id="OBEdQp6nxb0O3Byq4H7zfU" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="CESsXaf2Hi2OdmGQ2xXXTU" Name="Initial Value" Kind="InputPin" IsHidden="true" />
               <Pin Id="FxR2QZEooLeQE3YGY4T5VO" Name="Value" Kind="InputPin" />
               <Pin Id="UsOn1hFdEp6Odbojn2PvXN" Name="Sample" Kind="InputPin" />
               <Pin Id="H3T5NXTfX5ILaZyinSKeeo" Name="Value" Kind="OutputPin" />
@@ -1377,6 +1395,7 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="TogEdge" />
               </p:NodeReference>
+              <Pin Id="K4jtNEdRvlNQHLSGGcX5Wu" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="PKUc5DXVCv3LeA6AYqV75T" Name="Value" Kind="InputPin" />
               <Pin Id="PDu0Fo9JclVQSAYl3L2l0R" Name="Up Edge" Kind="OutputPin" />
               <Pin Id="QeC5clEcOLqOcW0eC5gmOR" Name="Down Edge" Kind="OutputPin" />
@@ -1386,6 +1405,8 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="FrameDelay" />
               </p:NodeReference>
+              <Pin Id="DvgJkALNGaaPOh5EKU6tAP" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="Q0Y69A4IvEMMPsnVgaBWQf" Name="Initial Value" Kind="InputPin" IsHidden="true" />
               <Pin Id="R6QBa8g4HvON8LR67Kbn9W" Name="Value" Kind="InputPin" />
               <Pin Id="SG6UnG1ANXsOK9XQGuXDkN" Name="Value" Kind="OutputPin" />
             </Node>

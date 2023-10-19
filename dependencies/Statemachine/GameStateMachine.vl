@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="NpRdnDu72nWNnvNR7gEPeR" LanguageVersion="2021.4.12.1374" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="NpRdnDu72nWNnvNR7gEPeR" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
   <Patch Id="FzmRuIW2XZnNF0XFOhLwAW">
     <Canvas Id="Mvjizzt6a3vPBjMjMAiHy2" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -15,10 +15,11 @@
         <Patch Id="RMvtymMsGjRMlmyEuIE0jY">
           <Canvas Id="NBJRMgQQRMfPEPKp5jP96I" CanvasType="Group">
             <Node Bounds="475,257,45,19" Id="SBpsq80HDdoPCm6q3WCFN5">
-              <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="GameStateMachine.vl">
+              <p:NodeReference LastCategoryFullName="Main" LastDependency="GameStateMachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Idle" />
               </p:NodeReference>
+              <Pin Id="QsqFMwfVTRTQHYorkzwu0b" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="H8wnAfcGmavMFHvC9nSIVH" Name="State Manager" Kind="InputPin" />
               <Pin Id="Dudg4VETZsuMso6wuZIp3Y" Name="Input" Kind="InputPin" />
               <Pin Id="MugwumUE83sQNFjHWlDTjy" Name="Input2" Kind="InputPin" />
@@ -26,19 +27,21 @@
               <Pin Id="O9w2AKJ8xxvMCMCWO1rjqR" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="475,397" Id="MIzKrCwvQxaMLeR3gXNZ7X">
-              <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="GameStateMachine.vl">
+              <p:NodeReference LastCategoryFullName="Main" LastDependency="GameStateMachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="GameRunning" />
               </p:NodeReference>
+              <Pin Id="GdxqRXQo9qILQWQkNbdR0z" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="K93RipTG2fUMnK2c3uLnPr" Name="Input" Kind="InputPin" />
               <Pin Id="FsdP6zevfwiLcK0vbUBf1E" Name="Update" Kind="ApplyPin" />
               <Pin Id="Nvckuh6zup2PpkhXXqJaSD" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="474,539,63,19" Id="PeklSuHqiipM2Fuh1xlZxi">
-              <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="GameStateMachine.vl">
+              <p:NodeReference LastCategoryFullName="Main" LastDependency="GameStateMachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="GameOver" />
               </p:NodeReference>
+              <Pin Id="IOXZPt6dU4ROaIYC0CX25X" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="Sf4SlwEuOEMQFG5dHzLod5" Name="Input" Kind="InputPin" />
               <Pin Id="L4KHrYb7qGRLcKMp1H6ReE" Name="Input2" Kind="InputPin" />
               <Pin Id="LrMFPEJcwlgLFZyrhFGEyz" Name="Update" Kind="ApplyPin" />
@@ -1211,15 +1214,16 @@
         <Patch Id="HyXKdOmbO6DNXXs0lbrHFC">
           <Canvas Id="Lrr3izYyTzYNWiIf8dHP3O" CanvasType="Group">
             <Node Bounds="446,347,84,26" Id="J2V5CmFym4gN2C2pLHUmlq">
-              <p:NodeReference LastCategoryFullName="GameStateMachine.GameStateMachine" LastSymbolSource="GameStateMachine.vl">
+              <p:NodeReference LastCategoryFullName="GameStateMachine.GameStateMachine" LastDependency="GameStateMachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="Category" Name="GameStateMachine" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
               </p:NodeReference>
+              <Pin Id="PZ3hG6M83ojL36MgG6Lxlg" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="Gya3zm3e7R2OIEJmeoNsEF" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="513,482,84,26" Id="PsFAUTSHztRMt0PMgn32cb">
-              <p:NodeReference LastCategoryFullName="GameStateMachine.GameStateMachine" LastSymbolSource="GameStateMachine.vl">
+              <p:NodeReference LastCategoryFullName="GameStateMachine.GameStateMachine" LastDependency="GameStateMachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="GameStateMachine" />
                 <Choice Kind="OperationCallFlag" Name="Update" />
@@ -1228,7 +1232,7 @@
               <Pin Id="QuReIA7dDexOe11Qu5xoDy" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="446,386,84,26" Id="BaWFBMWKLoYORYIqYlIOl4">
-              <p:NodeReference LastCategoryFullName="GameStateMachine.GameStateMachine" LastSymbolSource="GameStateMachine.vl">
+              <p:NodeReference LastCategoryFullName="GameStateMachine.GameStateMachine" LastDependency="GameStateMachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="Category" Name="GameStateMachine" />
                 <Choice Kind="OperationCallFlag" Name="Init" />
@@ -1238,10 +1242,11 @@
               <Pin Id="Ndn9BrMBbLSO9L26PjPk06" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="550,348,78,19" Id="FSro0LGc6d0NPbxrsnbLmz">
-              <p:NodeReference LastCategoryFullName="Statemachine" LastSymbolSource="VL.Statemachine.vl">
+              <p:NodeReference LastCategoryFullName="Statemachine" LastDependency="VL.Statemachine.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="StateManager" />
               </p:NodeReference>
+              <Pin Id="JdQLfRlnX4oNh1cUDXtX9w" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="SZHZInS65zbN1d4n7ci7tk" Name="Output" Kind="StateOutputPin" />
               <Pin Id="N83rmmQzhx8MClC7T3KVcJ" Name="State Name" Kind="OutputPin" />
             </Node>
@@ -1265,12 +1270,12 @@
               </Pin>
             </Node>
             <Pad Id="Jme0GpEGYWkOdJe3enUtQ9" Comment="Name" Bounds="554,563,95,15" ShowValueBox="true" isIOBox="true" Value="OnStartButton">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
             <Pad Id="AZ6IPMNuTikO3irWdm7Wir" Comment="Send" Bounds="628,591,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-              <p:TypeAnnotation>
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:TypeAnnotation>
@@ -1296,7 +1301,7 @@
               </Pin>
             </Node>
             <Pad Id="N79vFdj7BgKQLf634bcFjJ" Comment="Name" Bounds="776,561,95,15" ShowValueBox="true" isIOBox="true" Value="OnTimeOut">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
@@ -1317,12 +1322,12 @@
               </Pin>
             </Node>
             <Pad Id="EwjXAkQ6WTnOAjgLHYtZR1" Comment="Name" Bounds="990,560,95,15" ShowValueBox="true" isIOBox="true" Value="OnQuitButton">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
             <Pad Id="ST6DQ3jyozTOna9LndoHVV" Comment="Send" Bounds="1064,588,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-              <p:TypeAnnotation>
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:TypeAnnotation>
@@ -1347,12 +1352,12 @@
               </Pin>
             </Node>
             <Pad Id="Uzqyy1qPoCdOsElrYVzSbA" Comment="Name" Bounds="1207,560,95,15" ShowValueBox="true" isIOBox="true" Value="OnRestart">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
             <Pad Id="KCx06mRwwVlLPhHMXOzvwI" Comment="Send" Bounds="1281,588,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-              <p:TypeAnnotation>
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:TypeAnnotation>
@@ -1429,6 +1434,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="Mn5RaTRgvolP9kURb3Kfc3" Location="VL.CoreLib" Version="2021.4.12" />
+  <NugetDependency Id="Mn5RaTRgvolP9kURb3Kfc3" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
   <DocumentDependency Id="OrxTzT7OmGaLyPvnrPBwiK" Location="./VL.Statemachine.vl" />
 </Document>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="BX7xyzY2gJlLYZsBgLXw6s" LanguageVersion="2021.4.12.1374" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="BX7xyzY2gJlLYZsBgLXw6s" LanguageVersion="2023.5.3-0203-g579cc42b10" Version="0.128">
   <Patch Id="BZHqRunwJG8LAKHJZ9Fy9t">
     <Canvas Id="MtQFmd8s4jsMAPWy6G7qcN" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -19,6 +19,8 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
               </p:NodeReference>
+              <Pin Id="PbaxqDPLLksLyaEM7ujcaV" Name="Node Context" Kind="InputPin" IsHidden="true" />
+              <Pin Id="DnyrINNBGe8OiG02FNXyZu" Name="Initial Result" Kind="InputPin" IsHidden="true" />
               <Pin Id="DpPsufdbIGUPjxW4eagGGY" Name="Async Notifications" Kind="InputPin" />
               <Pin Id="PzK1aLxV6zBN2aOruLozDG" Name="Reset" Kind="InputPin" DefaultValue="False">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -151,6 +153,6 @@
     </Node>
   </Patch>
   <NugetDependency Id="Dt7Y980B8aTPRvhuvF1oOc" Location="VL.IO.MQTTnet" Version="0.1.0-alpha" />
-  <NugetDependency Id="O4dgt9ZZvp0NrSftoINPIB" Location="VL.CoreLib" Version="2021.4.12" />
-  <NugetDependency Id="Thw8OxBNZUDLVDe5uj3ozX" Location="VL.Audio" Version="1.0.14" />
+  <NugetDependency Id="O4dgt9ZZvp0NrSftoINPIB" Location="VL.CoreLib" Version="2023.5.3-0203-g579cc42b10" />
+  <NugetDependency Id="Thw8OxBNZUDLVDe5uj3ozX" Location="VL.Audio" Version="1.2.2" />
 </Document>

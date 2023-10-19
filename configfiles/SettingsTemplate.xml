@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<speechrecognition>
+		<account>
+			<key>EnterKeyHere</key>
+			<region>germanywestcentral</region>
+			<language>de-DE</language>
+		</account>
+	</speechrecognition>
+	<GraphicSettings>
+		<FXAA>True</FXAA>
+		<Bloom>True</Bloom>
+		<AmbientOcclusion>True</AmbientOcclusion>
+		<LightShafts>True</LightShafts>
+	</GraphicSettings>
+	<GameSettings>
+		<BoothCount>8</BoothCount>
+	</GameSettings>
+</settings>
