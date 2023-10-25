@@ -12,10 +12,10 @@ we try to get rid of that in future releases.
 
 -lastly install all the fonts included under assets/fonts to your system.
 
--You can download the binaries including the assets here:
+-download the binaries including the assets here:
 ftp://telefonzentrale@ftp.bubenhofer.com/MainVomAmt.zip
 
-***Readme aswell***
+***Readme as well***
 
 More information about the project:
 https://www.ds.uzh.ch/de/projekte/vr.html
