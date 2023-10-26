@@ -13,7 +13,7 @@ we try to get rid of that in future releases.
 -lastly install all the fonts included under assets/fonts to your system.
 
 -download the binaries including the assets here:
-ftp://telefonzentrale@ftp.bubenhofer.com/MainVomAmt.zip
+https://www.bubenhofer.com/telefonzentrale/MainVomAmt.zip
 
 ***Readme as well***
 
